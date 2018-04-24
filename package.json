@@ -1,0 +1,30 @@
+{
+  "name": "cardboard",
+  "version": "1.0.0",
+  "description": "card dashboard web app for collaborative science projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo index.js -s bundle.js -- -t envify",
+    "bundle": "browserify index.js -t envify > bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/cardboard.git"
+  },
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/cardboard/issues"
+  },
+  "homepage": "https://github.com/chanzuckerberg/cardboard#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "slack": "^8.2.0",
+    "emojis": "^1.0.10",
+    "replace-string": "^1.1.0"
+  },
+  "devDependencies": {
+    "envify": "^4.1.0"
+  }
+}
