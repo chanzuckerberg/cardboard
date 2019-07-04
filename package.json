@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo index.js -s bundle.js -- -t envify",
-    "bundle": "browserify index.js -t envify > bundle.js"
+    "bundle": "browserify index.js -t envify > bundle.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,11 @@
     "async": "^2.6.0",
     "slack": "^8.2.0",
     "emojis": "^1.0.10",
-    "replace-string": "^1.1.0"
+    "replace-string": "^1.1.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "envify": "^4.1.0"
-  }
+  },
+  "snyk": true
 }
